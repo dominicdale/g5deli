@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://g5-deli-gorbals.dominicdale.chatgpt.site"),
   title: "G5 Deli | Gorbals, Glasgow",
   description:
     "Breakfast, lunch, proper coffee and homemade treats on Crown Street, Gorbals.",
