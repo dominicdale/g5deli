@@ -8,3 +8,110 @@
 html { scroll-behavior: smooth; }
 * { box-sizing: border-box; }
 body { margin: 0; }
+
+@keyframes g5-reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(4rem) scale(.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes g5-reveal-left {
+  from {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes g5-reveal-right {
+  from {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes g5-photo-unmask {
+  from {
+    opacity: .35;
+    clip-path: inset(13% 10% 13% 10% round 3rem);
+    transform: scale(1.12) rotate(2deg);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 round 2.5rem);
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes g5-drift {
+  from { transform: translateY(2.5rem) rotate(-4deg); }
+  to { transform: translateY(-1.5rem) rotate(-1deg); }
+}
+
+@supports (animation-timeline: view()) {
+  .scroll-reveal,
+  .scroll-left,
+  .scroll-right,
+  .scroll-photo,
+  .scroll-drift {
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-timeline: view();
+  }
+
+  .scroll-reveal {
+    animation-name: g5-reveal-up;
+    animation-range: entry 2% cover 30%;
+  }
+
+  .scroll-reveal-late {
+    animation-range: entry 12% cover 38%;
+  }
+
+  .scroll-left {
+    animation-name: g5-reveal-left;
+    animation-range: entry 3% cover 32%;
+  }
+
+  .scroll-right {
+    animation-name: g5-reveal-right;
+    animation-range: entry 3% cover 32%;
+  }
+
+  .scroll-photo {
+    animation-name: g5-photo-unmask;
+    animation-range: entry 0% cover 38%;
+  }
+
+  .scroll-drift {
+    animation-name: g5-drift;
+    animation-range: entry 0% exit 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .scroll-reveal,
+  .scroll-left,
+  .scroll-right,
+  .scroll-photo,
+  .scroll-drift {
+    animation: none !important;
+    clip-path: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

@@ -196,21 +196,21 @@ export default function Home() {
               aria-hidden="true"
               className="absolute right-0 top-8 h-[82%] w-[84%] rounded-[48%_52%_42%_58%/50%_36%_64%_50%] bg-[#54b8ad]"
             />
-            <figure className="absolute right-[2%] top-[6%] h-[72%] w-[76%] rotate-2 overflow-hidden rounded-[2.5rem] border-4 border-[#173f3a] bg-white shadow-[12px_12px_0_#173f3a]">
-              <img
-                src="/images/live/g5-photo-6.jpg"
-                alt="The warm brick interior and busy counter at G5 Deli"
-                className="h-full w-full origin-top scale-[1.35] object-cover object-top"
-              />
-            </figure>
-            <figure className="absolute bottom-[4%] left-[1%] h-[38%] w-[43%] -rotate-3 overflow-hidden rounded-[2rem] border-4 border-[#173f3a] bg-white shadow-[9px_9px_0_#f5c84c]">
+            <figure className="scroll-photo absolute right-[2%] top-[6%] h-[72%] w-[76%] rotate-2 overflow-hidden rounded-[2.5rem] border-4 border-[#173f3a] bg-white shadow-[12px_12px_0_#173f3a]">
               <img
                 src="/images/live/g5-photo-2.jpg"
                 alt="A cooked breakfast with coffee and toast at G5 Deli"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover object-center"
               />
             </figure>
-            <figure className="absolute bottom-[6%] right-[1%] w-[42%] rotate-3 overflow-hidden rounded-[1.5rem] border-4 border-[#173f3a] bg-white shadow-[8px_8px_0_#c84f3a]">
+            <figure className="scroll-drift absolute bottom-[4%] left-[1%] h-[38%] w-[43%] -rotate-3 overflow-hidden rounded-[2rem] border-4 border-[#173f3a] bg-white shadow-[9px_9px_0_#f5c84c]">
+              <img
+                src="/images/live/g5-photo-4.jpg"
+                alt="Breakfast and the welcoming interior at G5 Deli"
+                className="h-full w-full object-cover object-top"
+              />
+            </figure>
+            <figure className="scroll-reveal scroll-reveal-late absolute bottom-[6%] right-[1%] w-[42%] rotate-3 overflow-hidden rounded-[1.5rem] border-4 border-[#173f3a] bg-white shadow-[8px_8px_0_#c84f3a]">
               <img
                 src="/images/live/g5-storefront.png"
                 alt="The G5 Deli and coffee shop storefront on Crown Street"
@@ -241,7 +241,7 @@ export default function Home() {
       <section id="menu" className="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-end gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-            <div>
+            <div className="scroll-left">
               <p className="text-xs font-black uppercase tracking-[0.18em] text-[#c84f3a]">
                 From the counter
               </p>
@@ -251,17 +251,17 @@ export default function Home() {
                 <span className="text-[#c84f3a]">Leave happy.</span>
               </h2>
             </div>
-            <p className="max-w-lg text-lg font-semibold leading-relaxed text-[#173f3a]/68">
+            <p className="scroll-right max-w-lg text-lg font-semibold leading-relaxed text-[#173f3a]/68">
               No fuss, no tiny portions—just fresh food, plenty of choice and a
               welcome that keeps regulars coming back.
             </p>
           </div>
 
           <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {menuCards.map((item) => (
+            {menuCards.map((item, index) => (
               <article
                 key={item.title}
-                className={`group flex min-h-[560px] flex-col overflow-hidden rounded-[2.25rem] border-3 border-[#173f3a] shadow-[8px_8px_0_#173f3a] transition hover:-translate-y-2 ${item.colour}`}
+                className={`scroll-reveal group flex min-h-[560px] flex-col overflow-hidden rounded-[2.25rem] border-3 border-[#173f3a] shadow-[8px_8px_0_#173f3a] transition hover:-translate-y-2 ${item.colour} ${index === 1 ? "scroll-reveal-late" : ""}`}
               >
                 <div className="m-3 h-56 overflow-hidden rounded-[1.65rem] border-2 border-[#173f3a] bg-white">
                   <img
@@ -299,7 +299,7 @@ export default function Home() {
           className="absolute -right-24 -top-24 h-96 w-96 rounded-full border-[70px] border-[#54b8ad]/25"
         />
         <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div>
+          <div className="scroll-left">
             <span className="inline-block rounded-full bg-[#f5c84c] px-4 py-2 text-xs font-black uppercase tracking-[0.14em] text-[#173f3a]">
               Made for sharing
             </span>
@@ -320,7 +320,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="scroll-right grid gap-4 sm:grid-cols-2">
             {cateringCards.map((item, index) => (
               <article
                 key={item.title}
@@ -332,11 +332,11 @@ export default function Home() {
                       : "bg-[#f2c7b8] text-[#173f3a] sm:col-span-2"
                 }`}
               >
-                <div className="flex items-start gap-5">
+                <div className="flex flex-col items-start gap-5">
                   <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border-2 border-[#173f3a] bg-[#fffaf3] shadow-[3px_3px_0_#173f3a]">
                     <DeliIcon name={item.icon} />
                   </span>
-                  <div>
+                  <div className="w-full">
                     <h3 className="font-display text-[clamp(1.55rem,2.5vw,2.2rem)] font-black leading-none tracking-[-0.05em]">
                       {item.title}
                     </h3>
@@ -354,14 +354,14 @@ export default function Home() {
       <section className="bg-[#ef6f55] px-4 py-20 text-[#173f3a] sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-center">
-            <div>
+            <div className="scroll-left">
               <p className="text-xs font-black uppercase tracking-[0.18em]">Word on Crown Street</p>
               <p className="mt-5 font-display text-[clamp(4rem,8vw,8rem)] font-black leading-none tracking-[-0.08em]">
                 4.6
               </p>
               <p className="mt-2 font-black">★★★★★ · 239 Google reviews</p>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="scroll-right grid gap-4 sm:grid-cols-2">
               <blockquote className="rounded-[2rem] border-3 border-[#173f3a] bg-[#fffaf3] p-7 shadow-[7px_7px_0_#173f3a]">
                 <p className="font-display text-2xl font-black leading-tight tracking-[-0.04em]">
                   “Very tasty and homemade. The staff are kind and friendly too.”
@@ -385,7 +385,7 @@ export default function Home() {
 
       <section className="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
-          <figure className="relative overflow-hidden rounded-[2.5rem] border-4 border-[#173f3a] bg-[#54b8ad] p-3 shadow-[11px_11px_0_#f5c84c]">
+          <figure className="scroll-photo relative overflow-hidden rounded-[2.5rem] border-4 border-[#173f3a] bg-[#54b8ad] p-3 shadow-[11px_11px_0_#f5c84c]">
             <img
               src="/images/live/g5-storefront.png"
               alt="G5 Deli storefront at 158 Crown Street in the Gorbals"
@@ -395,7 +395,7 @@ export default function Home() {
               158 Crown Street
             </figcaption>
           </figure>
-          <div>
+          <div className="scroll-right">
             <p className="text-xs font-black uppercase tracking-[0.18em] text-[#c84f3a]">
               A proper local
             </p>
@@ -428,7 +428,7 @@ export default function Home() {
 
       <section id="visit" className="bg-[#dce9df] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
-          <div>
+          <div className="scroll-left">
             <p className="text-xs font-black uppercase tracking-[0.18em] text-[#c84f3a]">
               Come by
             </p>
@@ -456,7 +456,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="rounded-[2rem] border-3 border-[#173f3a] bg-[#fffaf3] p-7 shadow-[8px_8px_0_#173f3a]">
+          <div className="scroll-right rounded-[2rem] border-3 border-[#173f3a] bg-[#fffaf3] p-7 shadow-[8px_8px_0_#173f3a]">
             <p className="text-xs font-black uppercase tracking-[0.16em] text-[#c84f3a]">
               Opening times
             </p>
@@ -479,7 +479,7 @@ export default function Home() {
       </section>
 
       <section className="border-y-4 border-[#173f3a] bg-[#173f3a]">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-3 px-5 py-5 text-white sm:flex-row sm:items-center sm:px-6 lg:px-8">
+        <div className="scroll-reveal mx-auto flex max-w-7xl flex-col justify-between gap-3 px-5 py-5 text-white sm:flex-row sm:items-center sm:px-6 lg:px-8">
           <div>
             <p className="text-xs font-black uppercase tracking-[0.16em] text-[#f5c84c]">
               Find G5 Deli
