@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "G5 Deli & Coffee Shop | Gorbals, Glasgow",
     description: "Coffee, deli favourites, catering and platters on Crown Street.",
-    images: ["/hero-line-v3.png"],
+    images: ["/hero-illustration-v6.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "G5 Deli & Coffee Shop | Gorbals, Glasgow",
     description: "Coffee, deli favourites, catering and platters on Crown Street.",
-    images: ["/hero-line-v3.png"],
+    images: ["/hero-illustration-v6.png"],
   },
   icons: {
     icon: "/favicon.svg",
