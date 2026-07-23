@@ -10,6 +10,7 @@ a { text-decoration: none; }
 .display-heading { max-width: 52rem; font-size: clamp(3rem, 5.5vw, 5.8rem); font-weight: 900; letter-spacing: -0.075em; line-height: 0.88; }
 
 .line-mark { color: #245b3b; display: block; pointer-events: none; }
+.line-mark.absolute { position: absolute; }
 .line-mark--cup { position: relative; width: 42px; height: 30px; border: 3px solid currentColor; border-top: 0; border-radius: 0 0 17px 17px; }
 .line-mark--cup::before { content: ""; position: absolute; top: 5px; right: -14px; width: 14px; height: 15px; border: 3px solid currentColor; border-left: 0; border-radius: 0 12px 12px 0; }
 .line-mark--cup::after { content: "~ ~"; position: absolute; top: -27px; left: 5px; width: 44px; color: #8dc63f; font-size: 23px; font-weight: 900; letter-spacing: 2px; transform: rotate(-12deg); }
