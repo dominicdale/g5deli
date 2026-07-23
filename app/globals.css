@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fbf9f1;
-  --foreground: #183e32;
+  --background: #f7f1e8;
+  --foreground: #20262d;
 }
 
 * { box-sizing: border-box; }
@@ -25,6 +25,13 @@ a { text-decoration: none; }
   text-transform: uppercase;
 }
 
+.brand-script {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+}
+
 .display-heading {
   max-width: 52rem;
   font-size: clamp(3rem, 5.5vw, 5.8rem);
@@ -33,4 +40,4 @@ a { text-decoration: none; }
   line-height: 0.88;
 }
 
-::selection { background: #f05e4e; color: #fff; }
+::selection { background: #10a9a5; color: #fff; }
