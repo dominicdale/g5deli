@@ -33,8 +33,8 @@ function DeliIcon({ name, className = "h-8 w-8" }: { name: string; className?: s
 export default function Home() {
   return (
     <main className="overflow-x-clip bg-[#fbf4ea] font-sans text-[#174c51]">
-      <header className="sticky top-0 z-50 bg-[#fbf4ea]/90 px-4 py-3 backdrop-blur-md sm:px-6 lg:px-8">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-full border-2 border-[#174c51] bg-[#fffaf3] px-4 py-3 shadow-[4px_4px_0_#174c51] sm:px-6" aria-label="Main navigation">
+      <header className="contents">
+        <nav className="sticky top-3 z-50 mx-auto mt-3 flex w-[calc(100%_-_2rem)] max-w-7xl items-center justify-between rounded-full border-2 border-[#174c51] bg-[#fffaf3]/95 px-4 py-3 shadow-[4px_4px_0_#174c51] backdrop-blur-md sm:w-[calc(100%_-_3rem)] sm:px-6 lg:w-[calc(100%_-_4rem)]" aria-label="Main navigation">
           <a href="#top" className="flex items-center gap-2" aria-label="G5 Deli home">
             <span className="grid h-9 w-9 place-items-center rounded-full bg-[#79bdb4] text-[#fffaf3]">
               <DeliIcon name="coffee" className="h-6 w-6" />
@@ -48,12 +48,12 @@ export default function Home() {
       </header>
 
       <section id="top" className="pb-7 pt-3">
-        <div className="relative grid min-h-[680px] w-full overflow-hidden bg-[#174c51] text-[#fffaf3] lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="relative grid min-h-[680px] w-full overflow-hidden bg-[#c9e0db] text-[#174c51] lg:grid-cols-[1.05fr_0.95fr]">
           <div className="relative z-10 flex w-full flex-col justify-center px-7 py-14 sm:px-12 lg:ml-auto lg:max-w-[720px] lg:px-16 lg:py-20">
-            <div className="mb-7 flex flex-wrap gap-2"><span className="rounded-full bg-[#79bdb4] px-4 py-2 text-xs font-black uppercase tracking-[0.12em] text-[#123e3b]">Gorbals, Glasgow</span><span className="rounded-full border-2 border-[#fffaf3]/60 px-4 py-2 text-xs font-black uppercase tracking-[0.12em]">Open from 6am</span></div>
-            <h1 className="max-w-3xl font-display text-[clamp(2.7rem,6vw,5.8rem)] font-black leading-[0.9] tracking-[-0.065em]"><span className="block whitespace-nowrap">Good food.</span><span className="block whitespace-nowrap text-[#e4b64b]">Good coffee.</span><span className="block whitespace-nowrap">Good people.</span></h1>
-            <p className="mt-8 max-w-xl text-lg font-semibold leading-relaxed text-[#fffaf3]/80 sm:text-xl">The friendly neighbourhood deli for early starts, easy lunches and catch-ups over cake.</p>
-            <div className="mt-9 flex flex-wrap gap-3"><a href="#menu" className="rounded-full bg-[#fffaf3] px-6 py-4 text-sm font-black text-[#174c51] transition hover:-translate-y-1 hover:bg-[#e4b64b]">See what&apos;s good</a><a href="#catering" className="rounded-full border-2 border-[#fffaf3]/50 px-6 py-4 text-sm font-black transition hover:border-[#e4b64b] hover:text-[#e4b64b]">Plan a platter</a></div>
+            <div className="mb-7 flex flex-wrap gap-2"><span className="rounded-full bg-[#e4b64b] px-4 py-2 text-xs font-black uppercase tracking-[0.12em]">Gorbals, Glasgow</span><span className="rounded-full border-2 border-[#174c51]/45 px-4 py-2 text-xs font-black uppercase tracking-[0.12em]">Open from 6am</span></div>
+            <h1 className="max-w-3xl font-display text-[clamp(2.7rem,6vw,5.8rem)] font-black leading-[0.9] tracking-[-0.065em]"><span className="block whitespace-nowrap">Good food.</span><span className="block whitespace-nowrap text-[#b85f4b]">Good coffee.</span><span className="block whitespace-nowrap">Good people.</span></h1>
+            <p className="mt-8 max-w-xl text-lg font-semibold leading-relaxed text-[#174c51]/75 sm:text-xl">The friendly neighbourhood deli for early starts, easy lunches and catch-ups over cake.</p>
+            <div className="mt-9 flex flex-wrap gap-3"><a href="#menu" className="rounded-full bg-[#174c51] px-6 py-4 text-sm font-black text-white transition hover:-translate-y-1 hover:bg-[#b85f4b]">See what&apos;s good</a><a href="#catering" className="rounded-full border-2 border-[#174c51]/50 px-6 py-4 text-sm font-black transition hover:border-[#b85f4b] hover:text-[#b85f4b]">Plan a platter</a></div>
           </div>
           <div className="relative min-h-[390px] overflow-hidden lg:min-h-full">
             <div className="absolute -right-20 top-1/2 h-[480px] w-[480px] -translate-y-1/2 rounded-full bg-[#e4b64b] sm:h-[600px] sm:w-[600px] lg:-right-48 lg:h-[700px] lg:w-[700px]" />
@@ -64,7 +64,7 @@ export default function Home() {
         <div className="mx-auto mt-4 flex w-fit max-w-[calc(100%-2rem)] flex-wrap items-center justify-center gap-1 rounded-full border-2 border-[#174c51] bg-[#fffaf3] p-1.5 shadow-[4px_4px_0_#174c51]"><span className="rounded-full bg-[#e4b64b] px-4 py-2 text-xs font-black uppercase tracking-[0.12em]">Breakfast</span><span aria-hidden className="px-1 text-[#cc6b52]">✦</span><span className="rounded-full px-4 py-2 text-xs font-black uppercase tracking-[0.12em]">Lunch</span><span aria-hidden className="px-1 text-[#cc6b52]">✦</span><span className="rounded-full bg-[#d8e8e3] px-4 py-2 text-xs font-black uppercase tracking-[0.12em]">Sweet treats</span><span aria-hidden className="px-1 text-[#cc6b52]">✦</span><span className="rounded-full bg-[#174c51] px-4 py-2 text-xs font-black uppercase tracking-[0.12em] text-white">Good chat</span></div>
       </section>
 
-      <section id="menu" className="px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <section id="menu" className="px-4 pb-24 pt-10 sm:px-6 lg:px-8 lg:pb-32 lg:pt-12">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-end gap-8 lg:grid-cols-[1.15fr_0.85fr]"><div><p className="text-xs font-black uppercase tracking-[0.18em] text-[#cc6b52]">What&apos;s good</p><h2 className="mt-4 max-w-3xl font-display text-[clamp(3.2rem,6vw,6rem)] font-black leading-[0.9] tracking-[-0.065em]">Come hungry.<br /><span className="text-[#cc6b52]">Leave smiling.</span></h2></div><p className="max-w-lg text-lg font-semibold leading-relaxed text-[#174c51]/70">Simple food, generous portions and the kind of welcome that makes you want to come back tomorrow.</p></div>
           <div className="mt-14 grid gap-5 md:grid-cols-3">
@@ -83,7 +83,7 @@ export default function Home() {
       </section>
 
       <section className="bg-[#174c51] px-4 py-24 text-white sm:px-6 lg:px-8 lg:py-28">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-center"><div><p className="text-xs font-black uppercase tracking-[0.18em] text-[#e4b64b]">A proper local</p><h2 className="mt-4 font-display text-[clamp(3rem,5.5vw,5.5rem)] font-black leading-[0.9] tracking-[-0.065em]">Small place.<br /><span className="text-[#f2d1c4]">Big welcome.</span></h2></div><div className="grid gap-3 sm:grid-cols-3"><div className="rounded-3xl border border-white/20 bg-white/5 p-5"><strong className="font-display text-3xl text-[#e4b64b]">6am</strong><p className="mt-2 text-sm font-bold text-white/70">Weekday starts</p></div><div className="rounded-3xl border border-white/20 bg-white/5 p-5"><strong className="font-display text-3xl text-[#e4b64b]">3 ways</strong><p className="mt-2 text-sm font-bold text-white/70">Sit in, takeaway or delivery</p></div><div className="rounded-3xl border border-white/20 bg-white/5 p-5"><strong className="font-display text-3xl text-[#e4b64b]">1 local</strong><p className="mt-2 text-sm font-bold text-white/70">Friendly Crown Street spot</p></div></div></div>
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-center"><div><p className="text-xs font-black uppercase tracking-[0.18em] text-[#e4b64b]">A proper local</p><h2 className="mt-4 font-display text-[clamp(3rem,5.5vw,5.5rem)] font-black leading-[0.9] tracking-[-0.065em]">Small place.<br /><span className="text-[#f2d1c4]">Big welcome.</span></h2></div><div className="grid gap-3 sm:grid-cols-3"><div className="rounded-3xl border border-white/20 bg-white/5 p-5"><strong className="font-display text-[clamp(1.35rem,2.2vw,2rem)] leading-tight text-[#e4b64b]">6am</strong><p className="mt-2 text-sm font-bold text-white/70">Weekday starts</p></div><div className="rounded-3xl border border-white/20 bg-white/5 p-5"><strong className="font-display text-[clamp(1.35rem,2.2vw,2rem)] leading-tight text-[#e4b64b]">3 ways</strong><p className="mt-2 text-sm font-bold text-white/70">Sit in, takeaway or delivery</p></div><div className="rounded-3xl border border-white/20 bg-white/5 p-5"><strong className="font-display text-[clamp(1.35rem,2.2vw,2rem)] leading-tight text-[#e4b64b]">1 local</strong><p className="mt-2 text-sm font-bold text-white/70">Friendly Crown Street spot</p></div></div></div>
       </section>
 
       <section id="visit" className="px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
