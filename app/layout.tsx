@@ -1,5 +1,16 @@
 import type { Metadata } from "next";
+import { DM_Sans, Fredoka } from "next/font/google";
 import "./globals.css";
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+});
+
+const fredoka = Fredoka({
+  subsets: ["latin"],
+  variable: "--font-fredoka",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://g5-deli-gorbals.dominicdale.chatgpt.site"),
@@ -30,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans">{children}</body>
+      <body className={`${dmSans.variable} ${fredoka.variable}`}>{children}</body>
     </html>
   );
 }
