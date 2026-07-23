@@ -42,7 +42,7 @@ export default function Home() {
             <p className="hero-note">Open weekdays from 6am <span>·</span> Weekends from 7am</p>
           </div>
           <div className="hero-art-wrap">
-            <div className="hero-art"><img src="/hero-illustration-v6.png" alt="Hand-drawn coffee cup with a biscuit and spoon" /></div>
+            <div className="hero-art"><img src="/hero-illustration-v7.png" alt="Hand-drawn coffee cup with a biscuit and spoon" /></div>
             <div className="art-caption"><span className="art-caption-mark">✳</span><span>Made fresh<br />every day</span></div>
           </div>
         </div>

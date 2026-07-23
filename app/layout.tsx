@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "G5 Deli & Coffee Shop | Gorbals, Glasgow",
     description: "Coffee, deli favourites, catering and platters on Crown Street.",
-    images: ["/hero-illustration-v6.png"],
+    images: ["/hero-illustration-v7.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "G5 Deli & Coffee Shop | Gorbals, Glasgow",
     description: "Coffee, deli favourites, catering and platters on Crown Street.",
-    images: ["/hero-illustration-v6.png"],
+    images: ["/hero-illustration-v7.png"],
   },
   icons: {
     icon: "/favicon.svg",
@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="font-sans">{children}</body>
     </html>
   );
 }
