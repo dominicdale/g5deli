@@ -114,6 +114,28 @@ function Arrow() {
 export default function Home() {
   return (
     <main className="overflow-x-clip bg-[#fff8ec] font-sans text-[#173f3a]">
+      <div
+        className="pointer-events-none fixed inset-0 z-[45] overflow-hidden"
+        aria-hidden="true"
+      >
+        <div className="absolute left-1/2 top-1/2 flex w-[180vw] -translate-x-1/2 -translate-y-1/2 -rotate-[24deg] flex-col gap-16 opacity-[0.045] sm:gap-20">
+          {Array.from({ length: 5 }).map((_, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center gap-8 whitespace-nowrap border-y-4 border-[#173f3a] py-3 font-display text-[clamp(4rem,10vw,9rem)] font-black uppercase leading-none tracking-normal text-[#173f3a]"
+            >
+              <span>Preview</span>
+              <span>Preview</span>
+              <span>Preview</span>
+              <span>Preview</span>
+            </div>
+          ))}
+        </div>
+        <div className="absolute bottom-5 right-4 rounded-full border-2 border-[#173f3a]/20 bg-[#fff8ec]/65 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#173f3a]/55 shadow-[3px_3px_0_rgba(23,63,58,0.12)] backdrop-blur-sm sm:bottom-6 sm:right-6">
+          Preview site
+        </div>
+      </div>
+
       <header className="contents">
         <nav
           className="sticky top-3 z-50 mx-auto mt-3 flex w-[calc(100%_-_2rem)] max-w-7xl items-center justify-between rounded-full border-2 border-[#173f3a] bg-[#fffaf3]/95 px-4 py-3 shadow-[4px_4px_0_#173f3a] backdrop-blur-md sm:w-[calc(100%_-_3rem)] sm:px-6 lg:w-[calc(100%_-_4rem)]"
