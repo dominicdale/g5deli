@@ -8,20 +8,20 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://g5-deli-gorbals.dominicdale.chatgpt.site"),
+  metadataBase: new URL("https://g5deli.pages.dev"),
   title: "G5 Deli & Coffee Shop | Gorbals, Glasgow",
   description:
     "Breakfast, lunch, proper coffee and homemade treats on Crown Street, Gorbals.",
   openGraph: {
     title: "G5 Deli & Coffee Shop | Gorbals, Glasgow",
     description: "Coffee, deli favourites, catering and platters on Crown Street.",
-    images: ["/hero-illustration-v7.png"],
+    images: ["/og.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "G5 Deli & Coffee Shop | Gorbals, Glasgow",
     description: "Coffee, deli favourites, catering and platters on Crown Street.",
-    images: ["/hero-illustration-v7.png"],
+    images: ["/og.png"],
   },
   icons: {
     icon: "/favicon.svg",
